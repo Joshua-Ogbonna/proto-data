@@ -26,6 +26,10 @@ const MONGODB_URI = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@cluster0.uoa3z.
 app.use(cors());
 app.use(express.json());
 
+app.use("/", (req, res) => {
+  res.json({message: "Hello World"})
+})
+
 // Routes
 app.use("/api", routes);
 
