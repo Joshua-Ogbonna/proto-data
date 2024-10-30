@@ -44,7 +44,15 @@ const dataFormats = [
 ];
 
 interface DatasetRequestFormProps {
-  form: UseFormReturn<any>;
+  form: UseFormReturn<{
+    dataTypes: any[];
+    useCase: string;
+    dataSize: string;
+    format: string;
+    additionalRequirements: string;
+    organization: string;
+    email: string;
+  }>;
   isSubmitting: boolean;
 }
 
