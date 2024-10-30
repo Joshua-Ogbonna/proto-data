@@ -24,7 +24,7 @@ const requestFormSchema = z.object({
   useCase: z.string().min(10, "Please provide more detail about your use case"),
   dataSize: z.string().min(1, "Select a data size"),
   format: z.string().min(1, "Select a format"),
-  additionalRequirements: z.string().optional(),
+  additionalRequirements: z.string(), // Remove .optional()
   organization: z.string().min(2, "Organization name is required"),
   email: z.string().email("Invalid email address"),
 });
